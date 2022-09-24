@@ -68,7 +68,7 @@ main {
 h1 {
     text-align: center;
     margin:0;
-    color: white;
+    color:white;
 }
 h1>img {
     width: 70px;
@@ -104,7 +104,7 @@ footer p{
 }
 main p {
     margin-bottom: 16px;
-    text-align: center;
+    text-align: left;
 }
 /* Media Query: Estilos a aplicar sólo en pantallas mayores a 400px */
 @media (min-width: 400px) {
@@ -118,9 +118,13 @@ footer {
 
 }
 .img-sun {
-    width: 100px;
-    height: auto;
+    width: 40px;
+    height: 40px;
 
+}
+.div.card {
+    text-align: left;
+    color: #04957d;
 }
 
 }    
