@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TUP LC2 - TP Integrador</title>
 <!-- Estilos CSS -->
-<link rel="stylesheet" href="C:\Users\Usuario\OneDrive\Escritorio\laboratorio2\Tup-lc-clima-app\css\pages\common.css">
+<link rel="stylesheet" href="css\pages\add-city.css">
 </head>
 <body>
 <header>
@@ -27,9 +27,22 @@
 <br>
 <section id="form-city-list">
     <form action="Ingresar la Ciudad">
-        <label for="Ingrese la Ciudad a Agregar">Ingrese la Ciudad a Agregar</label>
+        <label for="Ingrese la Ciudad a Agregar" title="Ingrese la Ciudad a Agregar">Ingrese la Ciudad a Agregar:</label>
+        <br>
+        <br>
         <input type="Ingrese la Ciudad a Agregar">
-        <ul><button text-align="center">Agregar</button></ul>
+        <br>
+        <br>
+        <ul><button type="Agregar" style="background-color: green; height: 25%; width: 35%; border-radius: 20px; border: 10px;">Agregar</button></ul>
+        <br>
+        <button type="agregada" style="background-color: green ; height: 25%; width: auto; border-radius: 15px; border: 15px;">Ciudad Agregada con Exito</button>
+        <br>
+        <br>
+        <button type="Error" style="background-color: red ; height: 45%; width: 35%; border-radius: 25px; border: 25px;">ERROR ! La Ciudad Ingresada no se encuentra en la API o se produjo un error al consultar</section></button>
+        <br>
+        <br>
+        <button type="Advertencia" style="background-color:rgb(248, 248, 31); height: 30%; width: 35% ; border-radius: 25px; border: 25px;">La Ciudad Ingresada ya se encuentra Registrada</button>
+
     </form>
 <!-- Sección donde se debe colocar el formulario, con el select y el
 botón de consultar -->
