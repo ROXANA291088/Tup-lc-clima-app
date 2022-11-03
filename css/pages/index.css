@@ -2,8 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
-    Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida SansUnicode', Geneva, Verdana, sans-serif;
 }
 :root {
     /* Declaro variables CSS con colores principales */
@@ -12,7 +11,8 @@
     --color-back-active: #04957d;
     --color-gradient: linear-gradient(to right, var(--color-theme),
     var(--color-back-active));
-    border-radius: 15%;
+
+    border-radius: 15px;
 }
 body {
     height: 100%;
@@ -40,6 +40,8 @@ header {
     width: 100%;
     background: var(--color-theme);
     border-width: 10%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 nav>ul {
     display: flex;
@@ -57,6 +59,8 @@ nav li a {
     font-size: 1em;
     font-weight: bold;
     color: var(--color-active);
+    border-top-left-radius : 15px;
+    border-top-right-radius : 15px;
 }
 nav li.current-page a {
     color: var(--color-theme);
@@ -118,6 +122,21 @@ main p {
 
 
 }
+#section-weather-result {
+    border-color: #04957d;
+  
+ 
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+.div.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Media Query: Estilos a aplicar sólo en pantallas mayores a 400px */
 @media (min-width: 400px) {
 main {
@@ -134,11 +153,6 @@ footer {
     height: 40px;
 
 }
-.div.card {
-    border-color: #04957d;
-    box-shadow: 10%;
-}
-    
 .p {
     padding: auto;
     text-align: right;

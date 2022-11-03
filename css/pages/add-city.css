@@ -2,8 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
-    Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida SansUnicode', Geneva, Verdana, sans-serif;
 }
 :root {
     /* Declaro variables CSS con colores principales */
@@ -29,6 +28,8 @@ a {
     position: relative;
     position: left;
     color: white;
+    background-color: #00594c;
+    border-radius: 0%;
 
 }
 header {
@@ -36,6 +37,8 @@ header {
     top: 0;
     width: 100%;
     background: var(--color-theme);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 nav>ul {
     display: flex;
@@ -53,6 +56,9 @@ nav li a {
     font-size: 1em;
     font-weight: bold;
     color: var(--color-active);
+    border-top-left-radius : 15px;
+    border-top-right-radius : 15px;
+
 }
 nav li.current-page a {
     color: var(--color-theme);
@@ -131,12 +137,25 @@ footer {
 label {
     text-align: center;
 }
-button.agregar {
+#buttonagregar {
     color: #00594c;
-    padding: 10%;
-    border-radius: 10%;
+    display: flex;
+    color: white;
+    justify-content: center;
+    border-radius: 0%;
+    text-align: center;
+    border-color: #00594c;
+    
 }
+div.p {
+    background:#00594c ;
+    width: auto; 
+    border-radius: 15px; 
+    border: 15px;
+    text-align: center;
+    justify-content: center;
 
+}
 }    
             
 
