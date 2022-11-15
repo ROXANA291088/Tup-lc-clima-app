@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TUP LC2 - TP Integrador</title>
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="css\pages\add-city.css">
-    <script src="./js/page/add-city.js" src="./js/page/common.js" defer></script>
+    <link rel="stylesheet" href="./css/pages/add-city.css">
+    <link rel="stylesheet" href="./css/common.css">
 
 </head>
 
@@ -29,26 +29,24 @@
     <main>
         <h2>Agregar Ciudad</h2>
         <br>
-        <section id="form-city-list">
-            <form action="Ingresar la Ciudad" id="ciudad" onclick="getCitiesFromLocalStorage()">
-                <label value="text" title="Ingrese la Ciudad a Agregar" id="cities" onclick="validarCities()">Ingrese la
-                    Ciudad a Agregar:</label>
-                <br>
-                <br>
-                <input type="Ingrese la Ciudad a Agregar"><button class="agregar" id="agregar" onclick=>Agregar</button>
-
-                <div>
+        <section>
+            <form action="#">
+                <div class="flex-item" >
+                    <label for="InsertarCiudad">Ingrese la ciudad a agregar:</label>
                     <br>
-                    <span style="background-color:green ;border-radius: 10%;;color: white;"> Ciudada Agregada con
-                        Exito</span>
-                    <br>
-                    <br>
-                    <span style="background-color: red; border-radius: 10%;color : white">ERROR !La Ciudad Ingresada no
-                        se encuentra en la API o se produjo un error al consultar</span>
-                    <br>
-                    <br>
-                    <span style="background-color:yellow ; border-radius: 10%;color: white;"> La Ciudad Ingresada ya se
-                        encuentra Registrada</span>
+                    <input type="text" name="IgresarCiudad" id="addCity">
+                </div>
+                <div class="flex-item">
+                    <input type="button" value="Agregar" class="btn" id="btnAdd" onclick="agregarCiudad()">
+                </div>
+                <div class="success" id="success">
+                    Ciudad agregada con exito
+                </div>
+                <div class="danger" id="danger">
+                    Error: La ciudad ingresada no se encuetra en la API o se produjo un error al consultar 
+                </div>
+                <div class="warning" id="warning">
+                    La ciudad ingresada ya se encuentra almacenada
                 </div>
         </section>
         <br>

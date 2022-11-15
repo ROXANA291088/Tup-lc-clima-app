@@ -1,68 +1,57 @@
-function validarCities() {
-    var ciudad = localStorage.getItem("CITIES");
-
-}
-if (!ifExist && cities != "") {
-    Result.classlist.remove("alert-warning");
-    Result.classlist.remove("alert-danger");
-    old_cities.push(cities);
-    Result.classlist.add("alert-success");
-    Result.innerText = "ciudad agregada correctamente";
-}
-else if (cities == "") {
-    Result.classlist.remove("alert-warning");
-    Result.classlist.remove("alert-success");
-    Result.classlist.remove("alert-danger");
-    Result.innerText = "Complete los campos";
-}
-else if (ifExist){
-    Result.classlist.remove("alert-danger");
-    Result.classlist.remove("alert-success");
-    Result.classlist.add("alert-warning");
-    Result.innerText = "La ciudad ya se encuentra registrada";
+function getCitiesFromLocalStorage() {
+    let cities = localStorage.getItem("CITIES");
+    if(cities) {
+    cities = JSON.parse(cities);
+    } else {
+    cities = [];
+    }
+    return cities;
 }
 
+const agregarCiudad= async () => {
+    var newCity = document.getElementById("addCity").value;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${newCity}&appid=f11c6986f11342cbed2f80bb626d6a8a&units=metric&lang=es`;
+    var response = await fetch(url);
+    var data
 
-$(document).ready(function () {
-    $('#boton-guardar').click(function () {
-       
-        var ciudad = document.getElementById("cities").value;
+    try {
+        if (response.ok) {
+            data = await response.json();
+            console.log(data);
 
-        /*Guardando los datos en el LocalStorage*/
-        sessionStorage.setItem("Cities", cities);
-        /*Limpiando los campos o inputs*/
-        document.getElementById("cities").value = "";
-    });
-
-    fetch("api.openweathermap.org/data/2.5/weather?q={nombreciudad}&appid={clave API}&units=metric&lang=es")
-        .then((Response) => {
-            console.log(Response)
-        }).catch((error) => {
-            console.log(error);
-        });
-    fetch("api.openweathermap.org/data/2.5/weather?q=Rosario&appid=3936d0749fdc3124c6566ed26XXXXX&units=metric&lang=es")
-        .then((Response) => {
-            console.log(Response)
-        }).catch((error) => {
-            console.log(error);
-        });
-
-
-
-
-    function getCitiesFromLocalStorage() {
-        let ciudad = localStorage.getItem("CITIES");
-        if (cities) {
-            cities = JSON.parse(cities);
         } else {
-            cities = [];
+            console.log(response.status);
         }
-        return cities;
-    }
-    function addNewCityToLocalStorage(newCity) {
-        let ciudad = getCitiesFromLocalStorage();
-        cities.push(newCity);
-        localStorage.setItem(“cities”, JSON.stringify(cities));
+    } catch (err) {
+        console.log(err);
     }
 
+    let ciudadAgregada = document.getElementById("addCity").value;
+    let cities = getCitiesFromLocalStorage();
+
+    document.getElementById("warning").style.display = "none";
+    document.getElementById("danger").style.display = "none";
+    document.getElementById("success").style.display = "none";
+
+    if(cities.indexOf(ciudadAgregada) >=0) {    
+
+        document.getElementById("warning").style.display = "block";
+
+    } else if (ciudadAgregada == "") {
+
+        document.getElementById("danger").style.display = "block";
+
+    }   else if(response.status == "404"){
+
+        document.getElementById("danger").style.display = "block";
+
+    } else {
+
+        cities.push(ciudadAgregada);  
+    
+        document.getElementById("success").style.display = "block";
+    }
+
+    localStorage.setItem("CITIES",JSON.stringify(cities));
+}
 

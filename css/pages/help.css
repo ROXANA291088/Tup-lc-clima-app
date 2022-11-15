@@ -1,154 +1,20 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida SansUnicode', Geneva, Verdana, sans-serif;
-}
-:root {
-    /* Declaro variables CSS con colores principales */
-    --color-theme: #00594c;
-    --color-active: #5df2d6;
-    --color-back-active: #04957d;
-    --color-gradient: linear-gradient(to right, var(--color-theme),
-    var(--color-back-active));
-}
-body {
-    height: 100%;
-    width: 100%;
-}
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-button,
-a {
-    user-select: none;
-    -webkit-user-select: none;
-    position: relative;
-    position: left;
-    color: white;
-}
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: var(--color-theme);
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-}
-nav>ul {
-    display: flex;
-    justify-content: space-between;
-    justify-content: center;
-}
-nav li {
-    flex:00 auto;
-}
-nav li a {
-    display: block;
-    padding: 16px 12px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: bold;
-    color: var(--color-active);
-    border-top-left-radius : 15px;
-    border-top-right-radius : 15px;
 
-}
-nav li.current-page a {
-    color: var(--color-theme);
-    background-color: var(--color-active);
-    pointer-events: none;
-    text-align: center;
-}
-main {
-    margin-top: 120px;
-    overflow: auto;
-    padding: 16px;
-    padding-bottom: 60px;
-    height: calc(100% - 120px);
-}
-h1 {
-    text-align: center;
-    margin:0;
-    color:white;
-}
-h1>img {
-    width: 50px;
-    vertical-align: middle;
-}
-h2 {
-    color: var(--color-theme);
-    margin: 16px0;
-    text-align: center;
-    width: auto;
-}
-h3 {
-    color: var(--color-theme);
-    margin: 8px0;
-}
-main section {
-    display: flex;
-    justify-content:center;
-    text-decoration: dashed;
-    text-align: center;
-    content: center;
-}
-footer {
-    position: fixed;
-    bottom: 0px;
-    background: var(--color-theme);
-    width: 100%;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-footer p{
-    font-size: small;
-    color: white;
-}
-main p {
-    margin-bottom: 16px;
-    text-align: left;
-}
-#form-mesag-list {
-    text-align: left;
-}
-#buttonlimpiar {
-    background-color: green;
-    height: 25%; 
-    width: 45%; 
-    border-radius: 25%; 
-    border: 10px;
-}
-
-
-
-
-/* Media Query: Estilos a aplicar sólo en pantallas mayores a 400px */
-@media (min-width: 400px) {
-main {
-    padding-left: 20%;
-    padding-right: 20%;
-}
-footer {
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-}
-.img-sun {
-    width: 40px;
-    height: 40px;
-
-}
-.div.card {
-    text-align: left;
+form .flex.flex-item .input-text{
+    width: 300px;
     color: #04957d;
+    background-color: #00594c;
 }
-
-}    
+form .alert{
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+form .flex-item .flex-item {
+    width: 30%;
+    color: #00594c;
+    border: #00594c;
+    color: antiquewhite;
+    
+}
             
 
 

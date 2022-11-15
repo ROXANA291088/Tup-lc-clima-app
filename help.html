@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TUP LC2 - TP Integrador</title>
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="css\pages\help.css">
-    <script src="./js/page/help.js" defer></script>
+    <link rel="stylesheet" href="./css/pages/help.css">
+    <link rel="stylesheet" href="./css/common.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Clima</a></li>
-                <li><a href="/add-city.html">Agregar Ciudad</a></li>
+                <li><a href="add-city.html">Agregar Ciudad</a></li>
                 <li class="current-page"><a href="#">Ayuda</a></li>
             </ul>
         </nav>
@@ -28,7 +28,7 @@
     <main>
         <h2>Ayuda Clima App v.1.0</h2>
         <p>Esta App te permite consultar el clima de una Ciudad en particular usando la API de <br>
-            <a href="https://openweathermap.org/" style="color: purple ;"> OpenWeatherMap </a>.
+            <a href="https://openweathermap.org/" target="_blank" style="color: purple ;"> OpenWeatherMap </a>.
         <p>Para poder consultar el clima primero debera<a href="./add-city.html" target="_blank"
                 style="color: purple ;"> Agregar una Ciudad </a>y luego seleccionar la Ciudad en <br>
             cuestion desde la pagina<a href="./index.html" target="_blank" style="color: purple;"> Clima </a>.
@@ -37,21 +37,18 @@
             <form action="mesag">
                 <form action="mesag">
                     <label for="Nombre">Nombre :</label>
-                    <br>
                     <input type="Nombre" name="nombre" id="nombre">
-                    <br>
                     <label for="mail">Email :</label>
-                    <br>
                     <input type="Email" name="Email" id="Email">
-                    <br>
                     <label for="text">Mensaje :</label>
-                    <br>
                     <textarea name="Mensaje" id="MSJ" cols="20" rows="10"></textarea>
-                    <br>
-                    <button id="Limpiar" style="background-color: #00594c;color:white; border:30px;">Limpiar</button>
-                    <BUtton id="Enviar" style="background-color:#00594c; color: white;border: 30px;">Enviar</BUtton>
-                    <br>
-                    <span style="background-color:red; color:white; border:center;"> Ingrese un Email valido</span>
+                    <div class="flex-item">
+                        <input type="button" name="Limpiar" value="Limpiar" class="btn">
+                        <input type="submit" name="Enviar" value="Enviar" class="btn">
+                    </div>
+                    <div class="alert">
+                        <span> Ingrese un <strong> Email </strong> válido</span>
+                    </div>
                 </form>
         </section>
         <section id="form-city-list">
